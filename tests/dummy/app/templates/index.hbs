@@ -6,6 +6,7 @@
 			<form action="">
 				<label for="demo1">Date</label>
 				{{date-input value=demo1 inputId="demo1"}}
+				<time class="date-result" datetime="{{demo1}}">{{demo1}}</time>
 			</form>
 		</section>
 		<section>
@@ -14,6 +15,7 @@
 			<form action="">
 				<label for="demo2">Date</label>
 				{{date-input local=true value=demo2 inputId="demo2"}}
+				<time class="date-result" datetime="{{demo2}}">{{demo2}}</time>
 			</form>
 		</section>
 		<section>
@@ -22,6 +24,7 @@
 			<form action="">
 				<label for="demo3">Week</label>
 				{{date-input range="week" value=demo3 inputId="demo3"}}
+				<time class="date-result">{{demo3}}</time>
 			</form>
 		</section>
 		<section>
@@ -30,6 +33,7 @@
 			<form action="">
 				<label for="demo4">Month</label>
 				{{date-input range="month" value=demo4 inputId="demo4"}}
+				<time class="date-result" datetime="{{demo4}}">{{demo4}}</time>
 			</form>
 		</section>
 		<section>
@@ -38,6 +42,7 @@
 			<form action="">
 				<label for="demo5">Time</label>
 				{{time-input value=demo5 inputId="demo4"}}
+				<time class="time-result">{{demo5}}</time>
 			</form>
 		</section>
 	</article>
