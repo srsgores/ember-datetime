@@ -41,6 +41,9 @@ module.exports = function (environment) {
 
 	if (environment === "production") {
 
+		var name = this.project.pkg.name;
+		ENV.locationType = "hash";
+		ENV.baseURL = "/" + name + "/";
 	}
 
 	return ENV;
