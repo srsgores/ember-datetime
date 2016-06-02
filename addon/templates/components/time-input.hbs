@@ -1,0 +1,7 @@
+{{#if needsPolyfill}}
+	<p>Not supported!</p>
+{{else}}
+	{{input id=inputId type=type value=value required=required autofocus=autofocus title=title autocomplete=autocomplete form=form formaction=formaction formentype=formenctype formmethod=formmethod formnovalidate=formnovalidate formtarget=formtarget inputmode=inputmode list=list maxlength=maxlength minlength=minlength name=name readonly=readonly size=size step=step tabindex=tabindex width=width}}
+{{/if}}
+
+{{yield}}

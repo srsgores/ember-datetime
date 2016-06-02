@@ -1,8 +1,15 @@
 import Ember from "ember";
+import InputtableMixin from "../mixins/inputtable";
 
-export default Ember.TextField.extend({
+import layout from "../templates/components/date-input";
+
+export default Ember.Component.extend(InputtableMixin, {
 	dateSupport: Ember.inject.service(),
-	classNameBindings: ["type", ":date-input", "dateSupport.supportsDate", "dateSupport.supportsDatetimeLocal"],
+	classNameBindings: ["containerClass", "dateSupport.supportsDate", "dateSupport.supportsDatetimeLocal"],
+	containerClass: "date-input-container",
+	range: null,
+	local: false,
+	needsPolyfill: false,
 	type: Ember.computed("local", "range", function() {
 		if (this.get("local")) {
 			return "datetime-local";
@@ -14,11 +21,11 @@ export default Ember.TextField.extend({
 			return "date";
 		}
 	}).readOnly(),
-	local: false,
-	range: null, /* Either week or month */
 	willRender() {
-		if (!this.get(`dateSupport.${Ember.String.camelize(`Supports ${this.get("type")}`)}`)) {
-			// support not here; fall back
+		if (this.get("range")) {
+			Ember.assert(`Date-input recieved range of ${this.get("range")}, but expected ranges "week" or "month"`, this.get("range") === "month" || this.get("range") === "week");
 		}
-	}
+		this.set("needsPolyfill", !this.get(`dateSupport.${Ember.String.camelize(`Supports ${this.get("type")}`)}`));
+	},
+	layout: layout
 });

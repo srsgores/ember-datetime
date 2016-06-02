@@ -46,6 +46,10 @@
 
 Not yet implemented, as the goal of this project is to keep native and polyfilled functionalities as close as possible.
 
+## Support
+
+[`date` and `time` inputs currently have **70.14%** global support](http://caniuse.com/#feat=input-datetime).
+
 ## Running
 
 * `ember server`
