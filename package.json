@@ -1,6 +1,6 @@
 {
   "name": "ember-datetime",
-  "version": "0.0.0",
+  "version": "0.5.6",
   "description": "Polyfilled date and datetime inputs for emberjs",
   "directories": {
     "doc": "doc",
