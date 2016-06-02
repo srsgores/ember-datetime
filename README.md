@@ -1,12 +1,50 @@
 # Ember-datetime
 
-This README outlines the details of collaborating on this Ember addon.
+`date`, `time`, `month`, `year`, and `datetime-local` `<input>`s, polyfilled, and wrapped in an ember addon.
 
 ## Installation
 
 * `git clone` this repository
 * `npm install`
 * `bower install`
+
+## Basic Usage
+
+```
+{{date-input value=model.field}}
+```
+
+(Where `model.field` corresponds to the bound field)
+
+### `datetime-local` `<input>`
+
+`datetime-local` allows for a specific time to be selected **in addition** to a date:
+
+```
+{{date-input value=model.field local=true}}
+```
+
+### Month Input
+
+```
+{{date-input value=model.field range="month"}}
+```
+
+### Week Input
+
+```
+{{date-input value=model.field range="week"}}
+```
+
+### Time Input
+
+```
+{{time-input value=model.field}
+```
+
+## Custom Ranges
+
+Not yet implemented, as the goal of this project is to keep native and polyfilled functionalities as close as possible.
 
 ## Running
 
