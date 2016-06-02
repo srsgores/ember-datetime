@@ -41,7 +41,7 @@ module.exports = function (environment) {
 
 	if (environment === "production") {
 
-		var name = this.project.pkg.name;
+		var name = "ember-datetime";
 		ENV.locationType = "hash";
 		ENV.baseURL = "/" + name + "/";
 	}

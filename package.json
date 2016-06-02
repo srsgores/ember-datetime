@@ -1,6 +1,6 @@
 {
   "name": "ember-datetime",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Polyfilled date and datetime inputs for emberjs",
   "directories": {
     "doc": "doc",
@@ -37,19 +37,20 @@
     "ember-resolver": "^2.0.3",
     "ember-try": "^0.2.2",
     "ember-try-config": "^2.0.1",
+    "ember-date-components": "0.3.2",
+    "ember-moment": "7.0.0-beta.3",
+    "ember-cli-moment-shim": "1.3.0",
     "loader.js": "^4.0.1"
   },
   "keywords": [
     "ember-addon"
   ],
   "dependencies": {
-    "ember-date-components": "0.3.2",
     "ember-cli-babel": "^5.1.6",
-    "ember-cli-htmlbars": "^1.0.8",
-    "ember-moment": "7.0.0-beta.3",
-    "ember-cli-moment-shim": "1.3.0"
+    "ember-cli-htmlbars": "^1.0.8"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "http://srsgores.github.io/ember-datetime/"
   }
 }
