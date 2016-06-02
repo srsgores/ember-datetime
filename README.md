@@ -11,10 +11,10 @@
 ## Basic Usage
 
 ```
-{{date-input value=model.field}}
+{{date-input value=model.field inputId=controlID}}
 ```
 
-(Where `model.field` corresponds to the bound field)
+(Where `model.field` corresponds to the bound field, and `inputId` corresponds to the `for` attribute of the `<label>`)
 
 ### `datetime-local` `<input>`
 
